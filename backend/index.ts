@@ -6,7 +6,8 @@ const typeDefs = gql`
     idade: Int
     salario: Float
     ativo: Boolean
-    id: ID
+    id: ID,
+    tecnologias: [String!]!
   }
 `
 
@@ -26,6 +27,9 @@ const resolvers = {
     },
     id() {
       return 123321123
+    },
+    tecnologias() {
+      return ["React", "Node", "GraphQL", "CSS"]
     }
   }
 }
