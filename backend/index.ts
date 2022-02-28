@@ -1,18 +1,34 @@
 import { gql, ApolloServer } from "apollo-server"
+  
+const typeDefs = gql`
+  type Query {
+    nome: String
+    idade: Int
+    salario: Float
+    ativo: Boolean
+    id: ID
+  }
+`
 
 const resolvers = {
   Query: {
-    hello() {
-      return "World"
+    nome() {
+      return 'Bruno Martins'
+    },
+    idade() {
+      return 24
+    },
+    salario() {
+      return 1234.50
+    },
+    ativo() {
+      return true
+    },
+    id() {
+      return 123321123
     }
   }
 }
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`
 
 const server = new ApolloServer({
   typeDefs,
