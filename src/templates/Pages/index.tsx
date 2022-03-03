@@ -4,7 +4,7 @@ import LinkWrapper from 'components/LinkWrapper'
 
 import * as SC from './styles'
 
-const AboutTemplate = () => {
+const PagesTemplate = () => {
   return (
     <SC.Content>
       <LinkWrapper href="/">
@@ -25,4 +25,4 @@ const AboutTemplate = () => {
   )
 }
 
-export default AboutTemplate
+export default PagesTemplate
